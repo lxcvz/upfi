@@ -1,10 +1,8 @@
 import {
   Box,
-  Heading,
-  Text,
-  Image,
+  Heading, Image,
   Skeleton,
-  SkeletonText,
+  SkeletonText, Text
 } from '@chakra-ui/react';
 import { useState } from 'react';
 

@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next';
 import fauna from 'faunadb';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 const { query } = fauna;
 const client = new fauna.Client({ secret: process.env.FAUNA_API_KEY });
@@ -49,7 +49,9 @@ export default async function handler(
   }
 
   if (req.method === 'GET') {
+    console.log(req.query)
     const { after } = req.query;
+
 
     const queryOptions = {
       size: 6,
